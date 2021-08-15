@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+
+
+// css variables 
+// colors 
+$Soft-Blue: hsl(231, 69%, 60%);
+$Soft-Red: hsl(0, 94%, 66%);
+
+$GrayishBlue: hsl(229, 8%, 60%);
+$Very-Dark-Blue: hsl(229, 31%, 21%);
+
+@mixin pc {
+    @media(min-width: 768px) {
+        @content
+    }
+};
+@mixin bigScreen {
+    @media(min-width: 1211px) {
+        @content
+    }
+};
+
+@include pc {
+    .container {
+        padding: 0 50px;
+    }
+}
+

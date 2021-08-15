@@ -1,0 +1,102 @@
+header {
+    .head {
+        padding: 20px 0;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            
+            img {
+                height: 20px;
+            }
+        }
+
+        &.open {
+            display: none;
+        }
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background-color: $Very-Dark-Blue;
+        height: 100vh;
+        text-align: center;
+        transform: translateX(70%);
+        visibility: hidden;
+        transition: transform 1s ease-in;
+
+        &.open {
+            width: 100vw;
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        .head {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                height: 20px;
+            }
+        }
+
+        ul {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                padding: 15px 0;
+                border-bottom: 1px solid $GrayishBlue;
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+                
+
+                &:hover {
+                    cursor: pointer;
+
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 300;
+
+                    &:hover {
+                        color: $Soft-Red;
+                    }
+                }
+            }
+        }
+        button {
+            margin-top: 50px;
+            text-transform: uppercase;
+            width: 100%;
+            
+            &.btn {
+                background-color: transparent;
+                border: 1px solid gray;
+
+                &:hover {
+                    background-color: transparent;
+                    color: $Soft-Red;
+                    border: 1px solid $Soft-Red;
+                }
+            }
+        }
+        .social-icons {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                margin: 0 10px;
+            }
+        }
+    }
+}

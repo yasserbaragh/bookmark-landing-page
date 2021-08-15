@@ -1,0 +1,71 @@
+main {
+    #features {
+        margin-top: 120px;
+        text-align: center;
+        p {
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+            color: $GrayishBlue;
+        }
+
+        .features {
+            .container {
+                ul {
+                    list-style-type: none;
+                    margin-bottom: 50px;
+                    padding: 0;
+
+                    li {
+                        padding: 20px 0;
+                        border-bottom: 1px solid $GrayishBlue;
+                        position: relative;
+
+                        &:first-child {
+                            border-top: 1px solid $GrayishBlue;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            color: $Soft-Red;
+                        }
+                        &.open::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -1px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 5px;
+                            width: 30%;
+                            background-color: $Soft-Red;
+                        }
+                    }
+                }
+            }
+            .tab {
+                .img {
+                    padding: 13px;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50px;
+                        left: 0;
+                        background-color: $Soft-Blue;
+                        width: 80vw;
+                        height: 85%;
+                        z-index: -1;
+                        border-radius: 0 0 30% 0;
+                    }
+                }
+                .container {
+                    margin-top: 50px;
+
+                    p {
+                        margin: 20px 0;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
